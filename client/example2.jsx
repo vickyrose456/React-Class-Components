@@ -7,6 +7,8 @@ class HelloUser extends React.Component{
             username: props.username,
         };
 
+        this.handleNameChange = this.handleNameChange.bind(this);
+
     }//constructor
 
     handleNameChange(e){
@@ -22,7 +24,7 @@ class HelloUser extends React.Component{
             <div>
                 Hello {this.state.username}
                 <p>Change Name: </p>
-                <input type="text" value={this.state.username} onChange = {this.handleNameChange}></input>
+                <input type="text" value={this.state.username} onChange = {this.handleNameChange}/>
             </div>
         );
     }//render
